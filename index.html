@@ -12,6 +12,7 @@
   <header class="site-header">
     <a class="brand" href="#top">La incertesa de les reserves</a>
     <nav class="nav" aria-label="Navegació principal">
+      <a href="#dades">Dades</a>
       <a href="#context">Context</a>
       <a href="#risc">Risc</a>
       <a href="#segments">Segments</a>
@@ -26,7 +27,10 @@
         <h1>La incertesa de les reserves</h1>
         <p class="subtitle">Els senyals que anticipen la cancel·lació hotelera</p>
         <p class="intro">
-          Una reserva no sempre acaba en una estada real. Aquesta visualització explora quins patrons de les dades poden ajudar a entendre quan una reserva és més incerta: l’origen del client, l’antelació, el segment comercial, el tipus de dipòsit i alguns senyals de compromís.
+          Les cancel·lacions hoteleres no són un fenomen aïllat. En el conjunt de dades analitzat, representen una part important de les reserves i obren una pregunta rellevant per a la gestió hotelera: hi ha senyals que permetin anticipar quan una reserva té més probabilitats de cancel·lar-se?
+        </p>
+        <p class="intro intro-secondary">
+          Aquesta visualització explora aquests patrons a partir de dos hotels portuguesos i mostra com l’origen del client, l’antelació, el segment de mercat i alguns indicadors de compromís poden ajudar a entendre millor aquesta incertesa.
         </p>
         <div class="hero-meta" aria-label="Informació del projecte">
           <span>Ivan Pallarès Ciudad</span>
@@ -37,40 +41,94 @@
       </div>
     </section>
 
-    <section id="context" class="section section-intro">
+    <section id="dades" class="section section-data">
       <div class="text-block">
-        <p class="step">Context</p>
+        <p class="step">0. Les dades</p>
+        <h2>Dos hotels, més de cent mil reserves</h2>
+        <p>
+          Les dades provenen de dos hotels de Portugal: un hotel urbà situat a Lisboa i un resort a l’Algarve. Cada registre correspon a una reserva hotelera, completada o cancel·lada, amb informació sobre l’origen del client, l’antelació de la reserva, el segment de mercat, el tipus de dipòsit i altres característiques de l’estada.
+        </p>
+      </div>
+      <div class="data-cards" aria-label="Comparació dels hotels del dataset">
+        <article class="hotel-card city-card">
+          <p class="card-label">City Hotel</p>
+          <h3>Hotel urbà a Lisboa</h3>
+          <dl>
+            <div>
+              <dt>Reserves</dt>
+              <dd>78.089</dd>
+            </div>
+            <div>
+              <dt>ADR mitjà</dt>
+              <dd>106,88 €</dd>
+            </div>
+            <div>
+              <dt>Perfil</dt>
+              <dd>Més pes de reserves urbanes i més taxa de cancel·lació.</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="hotel-card resort-card">
+          <p class="card-label">Resort Hotel</p>
+          <h3>Resort a l’Algarve</h3>
+          <dl>
+            <div>
+              <dt>Reserves</dt>
+              <dd>39.306</dd>
+            </div>
+            <div>
+              <dt>ADR mitjà</dt>
+              <dd>96,77 €</dd>
+            </div>
+            <div>
+              <dt>Perfil</dt>
+              <dd>Perfil més vacacional i menor taxa de cancel·lació.</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section id="context" class="section section-intro alt">
+      <div class="text-block">
+        <p class="step">1.</p>
         <h2>Gairebé 4 de cada 10 reserves es cancel·len</h2>
         <p>
-          El punt de partida és clar: les cancel·lacions no són un fenomen marginal. En el conjunt de dades net, el 37,5% de les reserves acaben cancel·lades. Això converteix la cancel·lació en una font important d’incertesa per a la gestió hotelera.
+          En aquest conjunt de dades, les cancel·lacions representen el 37,5% de les reserves. No són un detall menor: gairebé quatre de cada deu reserves no acaben convertint-se en una estada.
+        </p>
+        <p>
+          Per a un hotel, això introdueix una incertesa constant: habitacions que semblen ocupades poden quedar lliures, i decisions com la disponibilitat, els preus o la planificació del personal depenen d’una demanda que pot canviar abans del check-in.
         </p>
       </div>
       <div class="chart-card">
-        <!-- Escena 0: Overall booking status -->
+        <!-- 1: Overall booking status -->
         <div class="flourish-embed flourish-chart" data-src="visualisation/28984112"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28984112/thumbnail" width="100%" alt="Overall booking status chart" /></noscript></div>
       </div>
     </section>
 
     <section class="section">
       <div class="text-block">
-        <p class="step">Escena 1</p>
+        <p class="step">2.</p>
         <h2>Una reserva no sempre acaba en estada</h2>
         <p>
-          La incertesa no és igual en els dos hotels. El City Hotel presenta una taxa de cancel·lació més alta que el Resort Hotel. Aquesta diferència suggereix que el context de l’hotel —urbà o vacacional— pot influir en el comportament de les reserves.
+          La cancel·lació tampoc afecta igual els dos hotels. Al City Hotel, el 42,2% de les reserves es cancel·len, mentre que al Resort Hotel la xifra baixa al 28,1%.
+        </p>
+        <p>
+          La diferència apunta a dues realitats hoteleres diferents: l’hotel urbà concentra més incertesa en les reserves, mentre que el resort presenta un comportament més estable.
         </p>
         <p class="key-insight">
-          City Hotel: 42,2% de reserves cancel·lades. Resort Hotel: 28,1%.
+          El City Hotel té una taxa de cancel·lació 14 punts superior a la del Resort Hotel.
         </p>
       </div>
       <div class="chart-card">
-        <!-- Escena 1: Booking status by hotel type -->
+        <!-- 2: Booking status by hotel type -->
         <div class="flourish-embed flourish-chart" data-src="visualisation/28980496"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28980496/thumbnail" width="100%" alt="Booking status by hotel type chart" /></noscript></div>
       </div>
     </section>
 
     <section id="risc" class="section alt">
       <div class="text-block">
-        <p class="step">Escena 2</p>
+        <p class="step">3.</p>
         <h2>Portugal destaca pel risc de cancel·lació</h2>
         <p>
           L’origen del client és un dels primers senyals de risc. Les reserves de Portugal mostren una taxa de cancel·lació molt superior a la resta de països. El filtre del gràfic permet passar de la comparació general a una vista amb els principals mercats d’origen.
@@ -80,89 +138,104 @@
         </p>
       </div>
       <div class="chart-card">
-        <!-- Escena 2: Booking status by guest origin -->
+        <!-- 3: Booking status by guest origin -->
         <div class="flourish-embed flourish-chart" data-src="visualisation/28980793"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28980793/thumbnail" width="100%" alt="Booking status by guest origin chart" /></noscript></div>
       </div>
     </section>
 
     <section class="section">
       <div class="text-block">
-        <p class="step">Escena 3</p>
+        <p class="step">4.</p>
         <h2>Com més anticipada és la reserva, més creix el risc</h2>
         <p>
-          El risc de cancel·lació augmenta amb l’antelació. Aquest patró és especialment intens en les reserves de Portugal: quan la reserva es fa amb més de 181 dies d’antelació, la taxa de cancel·lació arriba aproximadament al 87,9% en la vista total.
+          L’antelació és un dels patrons més clars. Com més temps passa entre el moment de reservar i el dia d’arribada, més augmenta la probabilitat de cancel·lació.
+        </p>
+        <p>
+          El patró és especialment marcat en les reserves de Portugal: en la vista total, quan la reserva es fa amb més de 181 dies d’antelació, la taxa de cancel·lació arriba al 87,9%.
         </p>
         <p class="key-insight">
-          L’antelació transforma una reserva en una promesa molt més incerta.
+          Com més lluny queda el check-in, més incerta es torna la reserva.
         </p>
       </div>
       <div class="chart-card">
-        <!-- Escena 3: Cancellation rate by lead time and guest origin -->
+        <!-- 4: Cancellation rate by lead time and guest origin -->
         <div class="flourish-embed flourish-chart" data-src="visualisation/28980941"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28980941/thumbnail" width="100%" alt="Cancellation rate by lead time and guest origin chart" /></noscript></div>
       </div>
     </section>
 
     <section id="segments" class="section alt">
       <div class="text-block">
-        <p class="step">Escena 4</p>
-        <h2>No tots els segments tenen el mateix pes en el risc</h2>
+        <p class="step">5.</p>
+        <h2>No tots els segments de mercat tenen el mateix pes</h2>
         <p>
-          La taxa de cancel·lació no és l’únic element important: també cal considerar el volum. Alguns segments poden no tenir la taxa més alta, però acumulen moltes cancel·lacions perquè concentren moltes reserves.
+          La taxa de cancel·lació també varia segons el segment de mercat, és a dir, segons el tipus de canal o perfil comercial de la reserva. No totes les reserves arriben de la mateixa manera ni tenen el mateix comportament.
+        </p>
+        <p>
+          Al gràfic es veu que les reserves de grups (<em>Groups</em>) tenen una taxa de cancel·lació especialment alta. En canvi, les agències online (<em>Online TA</em>) tenen un percentatge més baix, però acumulen un volum molt elevat de reserves i, per tant, també concentren moltes cancel·lacions.
         </p>
         <p class="key-insight">
-          El volum ajuda a distingir un risc anecdòtic d’un risc operativament important.
+          Els segments més crítics són els que combinen una taxa alta de cancel·lació amb un volum important de reserves.
         </p>
       </div>
       <div class="chart-card">
-        <!-- Escena 4: Market segment bubble chart -->
+        <!-- 5: Market segment bubble chart -->
         <div class="flourish-embed flourish-scatter" data-src="visualisation/28984326"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28984326/thumbnail" width="100%" alt="Cancellation rate and booking volume by market segment scatter chart" /></noscript></div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section exploration-section">
       <div class="text-block">
-        <p class="step">Escena 4b · Exploració</p>
-        <h2>Quan es torna crític cada segment?</h2>
+        <p class="step">5b · Exploració</p>
+        <h2>Quan s’afegeix l’antelació</h2>
         <p>
-          Afegir l’antelació permet veure en quins trams temporals es concentra el risc de cada segment comercial. Aquesta vista és més exploratòria: permet filtrar pel total o per cada hotel i observar com evoluciona el risc al llarg del temps.
+          La lectura anterior es pot ampliar incorporant el temps d’antelació de la reserva. Aquesta vista permet observar com evoluciona la taxa de cancel·lació de cada segment de mercat quan el check-in és més o menys llunyà.
+        </p>
+        <p>
+          El patró reforça la idea central: alguns segments no només tenen més risc, sinó que aquest risc creix quan les reserves es fan amb molta antelació. El filtre permet veure el comportament global o separar-lo per hotel.
         </p>
       </div>
       <div class="chart-card">
-        <!-- Extra: Cancellation rate by lead time and market segment -->
+        <!-- 5b: Cancellation rate by lead time and market segment -->
         <div class="flourish-embed flourish-scatter" data-src="visualisation/28985229"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28985229/thumbnail" width="100%" alt="Cancellation rate by lead time and market segment scatter chart" /></noscript></div>
       </div>
     </section>
 
     <section class="section alt">
       <div class="text-block">
-        <p class="step">Escena 5</p>
+        <p class="step">6.</p>
         <h2>La paradoxa del dipòsit no reemborsable</h2>
         <p>
-          Les reserves amb dipòsit <em>Non Refund</em> apareixen associades a taxes molt altes de cancel·lació. És un resultat contraintuïtiu i cal interpretar-lo amb prudència: no implica causalitat, sinó una possible associació amb polítiques comercials, canals o segments concrets.
+          A primera vista, un dipòsit no reemborsable hauria de reduir el risc de cancel·lació. Però les dades mostren el contrari: les reserves amb dipòsit <em>Non Refund</em> apareixen associades a taxes molt altes de cancel·lació.
+        </p>
+        <p>
+          És un resultat contraintuïtiu i cal interpretar-lo amb prudència: no implica causalitat, sinó una possible associació amb polítiques comercials, canals o segments concrets.
         </p>
         <p class="key-insight">
           Non Refund: 99,8% de cancel·lació al City Hotel i 96,0% al Resort Hotel.
         </p>
       </div>
       <div class="chart-card">
-        <!-- Escena 5: Cancellation rate by deposit type and hotel -->
+        <!-- 6: Cancellation rate by deposit type and hotel -->
         <div class="flourish-embed flourish-chart" data-src="visualisation/28984454"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28984454/thumbnail" width="100%" alt="Cancellation rate by deposit type and hotel chart" /></noscript></div>
       </div>
     </section>
 
     <section class="section">
       <div class="text-block">
-        <p class="step">Escena 6</p>
+        <p class="step">7.</p>
         <h2>Les peticions especials són un senyal de compromís</h2>
         <p>
-          Després dels senyals de risc, apareix un senyal de confiança. Les reserves amb peticions especials tendeixen a cancel·lar menys. El canvi més important es veu entre no fer cap petició i fer-ne almenys una.
+          No tots els patrons apunten cap a més risc. Les peticions especials —com demanar un tipus de llit o una habitació concreta— semblen indicar més implicació per part del client.
+        </p>
+        <p>
+          Les reserves sense cap petició especial són les que més es cancel·len. En canvi, quan el client fa almenys una petició, la taxa de cancel·lació cau de manera clara.
         </p>
         <p class="key-insight">
           Al City Hotel, la cancel·lació baixa del 55,6% amb 0 peticions a prop de l’11% amb 4 peticions.
         </p>
       </div>
       <div class="chart-card">
-        <!-- Escena 6: Cancellation rate by number of special requests -->
+        <!-- 7: Cancellation rate by number of special requests -->
         <div class="flourish-embed flourish-chart" data-src="visualisation/28985117"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28985117/thumbnail" width="100%" alt="Cancellation rate by number of special requests chart" /></noscript></div>
       </div>
     </section>
@@ -170,28 +243,30 @@
     <section id="conclusio" class="section conclusion">
       <div class="text-block wide">
         <p class="step">Conclusió</p>
-        <h2>La incertesa de les reserves deixa rastres abans del check-in</h2>
+        <h2>Les reserves no tenen totes el mateix risc</h2>
         <p>
-          Les dades mostren que les cancel·lacions no es distribueixen de manera aleatòria. L’origen del client, l’antelació, el segment comercial i alguns indicadors de compromís permeten identificar reserves més o menys incertes. Aquesta lectura no substitueix un model predictiu, però sí ajuda a entendre visualment quins factors concentren més risc.
+          La visualització mostra que la cancel·lació hotelera no afecta totes les reserves de la mateixa manera. Alguns patrons apareixen amb força: l’origen del client, l’antelació de la reserva i el segment de mercat concentren bona part de la incertesa.
         </p>
-        <div class="summary-grid">
+        <p>
+          Aquesta lectura no pretén substituir un model predictiu, però ajuda a entendre visualment on s’acumula el risc i quins senyals poden ser útils per mirar les reserves amb més criteri.
+        </p>
+        <h3 class="summary-title">Factors que concentren més risc</h3>
+        <div class="summary-grid four-cards">
           <article>
-            <h3>Senyals de risc</h3>
-            <ul>
-              <li>Origen Portugal</li>
-              <li>Molta antelació</li>
-              <li>Segments com Groups o Online TA</li>
-              <li>Dipòsit Non Refund, interpretat amb cautela</li>
-            </ul>
+            <h3>Origen de l’hoste</h3>
+            <p>Les reserves de Portugal mostren una taxa de cancel·lació molt superior a la resta de països.</p>
           </article>
           <article>
-            <h3>Senyals de confiança</h3>
-            <ul>
-              <li>Peticions especials</li>
-              <li>Clients repetidors</li>
-              <li>Reserves directes</li>
-              <li>Menys antelació en alguns perfils</li>
-            </ul>
+            <h3>Antelació de la reserva</h3>
+            <p>Com més lluny queda el check-in, més augmenta la incertesa.</p>
+          </article>
+          <article>
+            <h3>Segment de mercat</h3>
+            <p>Els grups (<em>Groups</em>) i les agències online (<em>Online TA</em>) combinen risc i volum de maneres diferents.</p>
+          </article>
+          <article>
+            <h3>Implicació del client</h3>
+            <p>Les reserves sense peticions especials són les que més es cancel·len.</p>
           </article>
         </div>
       </div>
