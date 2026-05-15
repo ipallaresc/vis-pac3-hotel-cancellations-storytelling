@@ -125,6 +125,13 @@ h1 {
 .section-data {
   background: #ffffff;
   align-items: stretch;
+  grid-template-columns: 1fr;
+}
+.section-data .text-block {
+  max-width: 880px;
+}
+.section-data .data-cards {
+  width: min(100%, 1080px);
 }
 .text-block {
   max-width: 620px;
@@ -189,7 +196,7 @@ h1 {
 dl { margin: 0; }
 dl div {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: minmax(95px, 0.42fr) minmax(0, 1fr);
   gap: 1rem;
   padding: 0.85rem 0;
   border-top: 1px solid var(--line);
@@ -210,7 +217,7 @@ dd {
 
 .conclusion {
   display: block;
-  background: var(--accent-pale);
+  background: #fff7ed !important;
   color: var(--ink);
 }
 .conclusion .text-block {
@@ -250,7 +257,7 @@ dd {
 }
 .footer {
   padding: 1.5rem clamp(1rem, 5vw, 4rem);
-  background: #f7ede3;
+  background: #ffffff;
   color: var(--muted);
   border-top: 1px solid rgba(217,95,2,0.16);
   font-size: 0.92rem;

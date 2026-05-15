@@ -94,7 +94,7 @@
         <p class="step">1.</p>
         <h2>Gairebé 4 de cada 10 reserves es cancel·len</h2>
         <p>
-          En aquest conjunt de dades, les cancel·lacions representen el 37,5% de les reserves. No són un detall menor: gairebé quatre de cada deu reserves no acaben convertint-se en una estada.
+          En aquest conjunt de dades, les cancel·lacions representen el 37,5% de les reserves.
         </p>
         <p>
           Per a un hotel, això introdueix una incertesa constant: habitacions que semblen ocupades poden quedar lliures, i decisions com la disponibilitat, els preus o la planificació del personal depenen d’una demanda que pot canviar abans del check-in.
@@ -208,7 +208,7 @@
           A primera vista, un dipòsit no reemborsable hauria de reduir el risc de cancel·lació. Però les dades mostren el contrari: les reserves amb dipòsit <em>Non Refund</em> apareixen associades a taxes molt altes de cancel·lació.
         </p>
         <p>
-          És un resultat contraintuïtiu i cal interpretar-lo amb prudència: no implica causalitat, sinó una possible associació amb polítiques comercials, canals o segments concrets.
+          És un resultat contraintuïtiu i cal interpretar-lo amb prudència: no implica causalitat. Una possible explicació és que aquestes condicions s’apliquin precisament a reserves, canals o segments que ja comporten més risc, i que per això apareguin associades a taxes de cancel·lació tan elevades.
         </p>
         <p class="key-insight">
           Non Refund: 99,8% de cancel·lació al City Hotel i 96,0% al Resort Hotel.
@@ -225,10 +225,10 @@
         <p class="step">7.</p>
         <h2>Les peticions especials són un senyal de compromís</h2>
         <p>
-          No tots els patrons apunten cap a més risc. Les peticions especials —com demanar un tipus de llit o una habitació concreta— semblen indicar més implicació per part del client.
+          No tots els patrons apunten cap a més risc. Les peticions especials (demanar un tipus de llit o una habitació concreta) semblen indicar més implicació per part del client.
         </p>
         <p>
-          Les reserves sense cap petició especial són les que més es cancel·len. En canvi, quan el client fa almenys una petició, la taxa de cancel·lació cau de manera clara.
+          Les reserves sense cap petició especial són les que més es cancel·len. En canvi, quan el client fa almenys una petició, la taxa de cancel·lació disminueix de manera clara.
         </p>
         <p class="key-insight">
           Al City Hotel, la cancel·lació baixa del 55,6% amb 0 peticions a prop de l’11% amb 4 peticions.
@@ -245,10 +245,7 @@
         <p class="step">Conclusió</p>
         <h2>Les reserves no tenen totes el mateix risc</h2>
         <p>
-          La visualització mostra que la cancel·lació hotelera no afecta totes les reserves de la mateixa manera. Alguns patrons apareixen amb força: l’origen del client, l’antelació de la reserva i el segment de mercat concentren bona part de la incertesa.
-        </p>
-        <p>
-          Aquesta lectura no pretén substituir un model predictiu, però ajuda a entendre visualment on s’acumula el risc i quins senyals poden ser útils per mirar les reserves amb més criteri.
+          La visualització mostra que la cancel·lació hotelera no afecta totes les reserves de la mateixa manera. L’origen del client, l’antelació de la reserva i el segment de mercat concentren bona part de la incertesa.
         </p>
         <h3 class="summary-title">Factors que concentren més risc</h3>
         <div class="summary-grid four-cards">
@@ -258,11 +255,11 @@
           </article>
           <article>
             <h3>Antelació de la reserva</h3>
-            <p>Com més lluny queda el check-in, més augmenta la incertesa.</p>
+            <p>A mesura que augmenta l’antelació, també creix la probabilitat de cancel·lació.</p>
           </article>
           <article>
             <h3>Segment de mercat</h3>
-            <p>Els grups (<em>Groups</em>) i les agències online (<em>Online TA</em>) combinen risc i volum de maneres diferents.</p>
+            <p>Els grups (<em>Groups</em>) mostren una taxa elevada, mentre que les agències online (<em>Online TA</em>) acumulen molt volum de reserves.</p>
           </article>
           <article>
             <h3>Implicació del client</h3>
